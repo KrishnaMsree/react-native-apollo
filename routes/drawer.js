@@ -7,6 +7,7 @@ import RetirementOutlookStack from './retirmentOutlookStack';
 import OnBoardingStack from './onBoardingStack';
 import GoalStack from './goalStack';
 import DashboardStack from './dashboardStack';
+import PayOffStack from './payOffStack';
 
 const RootDrawerNavigation = createDrawerNavigator({
     BenefitsPreview:{
@@ -18,11 +19,14 @@ const RootDrawerNavigation = createDrawerNavigator({
     OnBoarding:{
         screen : OnBoardingStack
     },
-    // Dashboard:{
-    //     screen : DashboardStack
-    // },
-    // Goals:{
-    //     screen : GoalStack
+    Dashboard:{
+        screen : DashboardStack
+    },
+    Goals:{
+        screen : GoalStack
+    },
+    // PayOff:{
+    //     screen : PayOffStack
     // },
 })
 

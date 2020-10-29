@@ -1,10 +1,10 @@
 import React from 'react';
-import {View, Text, ScrollView, StyleSheet} from 'react-native';
+import {View, Text, ScrollView, StyleSheet, Button} from 'react-native';
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card'
 import { StackedAreaChart, YAxis, Grid } from 'react-native-svg-charts'
 import * as shape from 'd3-shape'
-import Button from '../shared/button'
+import Buttons from '../shared/button'
 
 export default function RetirementOutLook(){
     
@@ -75,36 +75,36 @@ export default function RetirementOutLook(){
             }
             </Card>
             <Text style={globalStyles.headerText} >Your Retirement Outlook</Text>
-            {/* <Text>This is Benefits Preview Page</Text> */}
+            {/* <Buttons title="Reactivate" text="Reactivate" style={{backgroundColor:'pink'}}/> */}
             <Card>
-            <View style={ { flexDirection: 'row-reverse', height: 200 } }>
-                <StackedAreaChart
-                    style={ { flex: 1 } }
-                    contentInset={ { top: 10, bottom: 10 } }
-                    data={ data }
-                    keys={ keys }
-                    colors={ colors }
-                    
-                >
-                    {/* <Grid/> */}
-                </StackedAreaChart>
-                <YAxis
-                    style={ { position: 'absolute', top: 0, bottom: 0 }}
-                    data={ StackedAreaChart.extractDataPoints(data, keys) }
-                    contentInset={ { top: 10, bottom: 10 } }
-                    svg={ {
-                        fontSize: 8,
-                        fill: 'black',
-                        stroke: 'black',
-                        strokeWidth: 0.1,
-                        alignmentBaseline: 'baseline',
-                        baselineShift: '3',
-                    } }
-                />
-            </View>
+                <View style={ { flexDirection: 'row-reverse', height: 200 } }>
+                    <StackedAreaChart
+                        style={ { flex: 1 } }
+                        contentInset={ { top: 10, bottom: 10 } }
+                        data={ data }
+                        keys={ keys }
+                        colors={ colors }
+                        
+                    >
+                        {/* <Grid/> */}
+                    </StackedAreaChart>
+                    <YAxis
+                        style={ { position: 'absolute', top: 0, bottom: 0 }}
+                        data={ StackedAreaChart.extractDataPoints(data, keys) }
+                        contentInset={ { top: 10, bottom: 10 } }
+                        svg={ {
+                            fontSize: 8,
+                            fill: 'black',
+                            stroke: 'black',
+                            strokeWidth: 0.1,
+                            alignmentBaseline: 'baseline',
+                            baselineShift: '3',
+                        } }
+                    />
+                </View>
             </Card>
             <View style={{marginTop:10}}>
-                <Button  text="Add Text  " onPress={()=>console.log("Add text button pressed")}/>
+                <Buttons  text="Add Text  " onPress={()=>console.log("Add text button pressed")}/>
                 <Text style={{lineHeight:20,marginTop:10}}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna

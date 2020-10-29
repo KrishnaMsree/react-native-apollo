@@ -30,7 +30,7 @@ export const globalStyles = StyleSheet.create({
     },
     image: {
         width: '100%',
-        height: '55%',
+        height: 200,
         borderWidth : 1,
         borderRadius: 5,
     }

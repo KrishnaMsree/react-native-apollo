@@ -7,7 +7,6 @@ export default function FlatButton({ text, onPress }) {
     <TouchableOpacity onPress={onPress}>
       <View style={styles.button}>
         <Text style={styles.buttonText}>{text}</Text>
-        <Ionicons name="md-information-circle-outline" size={24} color="white" />
       </View>
     </TouchableOpacity>
   );
@@ -15,7 +14,7 @@ export default function FlatButton({ text, onPress }) {
 
 const styles = StyleSheet.create({
   button: {
-    borderRadius: 2,
+    borderRadius: 55,
     paddingVertical: 14,
     marginTop:10,
     marginBottom:10,
