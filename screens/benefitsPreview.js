@@ -1,5 +1,5 @@
 import React from 'react';
-import {View, Text, ScrollView} from 'react-native';
+import {View, Text, ScrollView, StyleSheet, Image} from 'react-native';
 import { globalStyles } from '../styles/global';
 import Card from '../shared/card'
 import { DataTable } from 'react-native-paper';
@@ -54,7 +54,10 @@ export default function BenefitsPreview(){
                 }
             </Card>
             <Card>
-                <Text style={globalStyles.cardText}>Health</Text>
+                <View style={{flexDirection:'row', marginTop:15}}>
+                    <Image source={require('../assets/health.png')} style={styles.headerImage} />
+                    <Text style={styles.cardText}>  Health</Text>
+                </View>
                 <Text style={globalStyles.subTitle}>Contributions per month</Text>
                     <DataTable>
                         {headings.map(head => {
@@ -80,8 +83,11 @@ export default function BenefitsPreview(){
                             </DataTable.Row>
                         )})}
                     </DataTable>
-                <Text style={globalStyles.cardText}>Dental and Vision</Text>
-                <Text style={globalStyles.subTitle}>Contributions per month</Text>
+                <View style={{flexDirection:'row', marginTop:15}}>
+                    <Image source={require('../assets/dental_and_vision.png')} style={styles.headerImage} />
+                    <Text style={styles.cardText}>  Dental and Vision</Text>
+                </View>
+                {/* <Text style={globalStyles.subTitle}>Contributions per month</Text> */}
                     <DataTable>
                         {headings.map(head => {
                             return (
@@ -106,8 +112,12 @@ export default function BenefitsPreview(){
                             </DataTable.Row>
                         )})}
                     </DataTable>
-                <Text style={globalStyles.cardText}>Student Loan Forgiveness</Text>
-                <Text style={globalStyles.subTitle}>Contributions per month</Text>
+                
+                <View style={{flexDirection:'row', marginTop:15}}>
+                    <Image source={require('../assets/studentLoan.png')} style={styles.headerImage} />
+                    <Text style={styles.cardText}>  Student Loan Forgiveness</Text>
+                </View>
+                {/* <Text style={globalStyles.subTitle}>Contributions per month</Text> */}
                     <DataTable>
                         {headings.map(head => {
                             return (
@@ -131,8 +141,11 @@ export default function BenefitsPreview(){
                             </DataTable.Row>
                         )})}
                     </DataTable>
-                <Text style={globalStyles.cardText}>Retirement</Text>
-                <Text style={globalStyles.subTitle}>Contributions per month</Text>
+                <View style={{flexDirection:'row', marginTop:15}}>
+                    <Image source={require('../assets/retirement.png')} style={styles.headerImage} />
+                    <Text style={styles.cardText}>  Retirement</Text>
+                </View>
+                {/* <Text style={globalStyles.subTitle}>Contributions per month</Text> */}
                     <DataTable>
                         {headings.map(head => {
                             return (
@@ -161,3 +174,17 @@ export default function BenefitsPreview(){
         </ScrollView>
     )
 }
+
+const styles = StyleSheet.create({
+    headerImage: {
+      width: 26,
+      height: 26,
+    //   marginHorizontal: 10
+    },
+    cardText: {
+        fontWeight: 'bold',
+        fontSize: 20,
+        paddingBottom: 10,
+        // paddingTop: 10,
+    },
+  });

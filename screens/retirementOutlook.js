@@ -105,7 +105,7 @@ export default function RetirementOutLook(){
             </Card>
             <View style={{marginTop:10}}>
                 <Buttons  text="Add Text  " onPress={()=>console.log("Add text button pressed")}/>
-                <Text style={{lineHeight:20,marginTop:10}}>
+                <Text style={{lineHeight:20,marginTop:10, marginLeft:10}}>
                     Lorem ipsum dolor sit amet, consectetur adipiscing elit, 
                     sed do eiusmod tempor incididunt ut labore et dolore magna
                         aliqua. Ut venenatis tellus in metus vulputate eu scelerisque 

@@ -25,9 +25,9 @@ const RootDrawerNavigation = createDrawerNavigator({
     Goals:{
         screen : GoalStack
     },
-    // PayOff:{
-    //     screen : PayOffStack
-    // },
+    OneTimeLoan:{
+        screen : PayOffStack
+    },
 })
 
 export default createAppContainer(RootDrawerNavigation)
